@@ -17,6 +17,7 @@ Wordpress2016.overrideThemeStyles = () => {
       fontSize: "2rem",
     },
     "h3, a": {
+      width: `fit-content`,
       fontWeight: `100`,
       fontFamily: `sans-serif`,
       padding: `3px`,

@@ -12,9 +12,9 @@ const Layout = ({ location, title, children }) => {
       <h1
         style={{
           ...scale(1.5),
-          marginBottom: rhythm(1.5),
+          marginBottom: rhythm(2),
           marginTop: 0,
-          fontSize: `5rem`,
+          fontSize: `6rem`,
           fontFamily: `Open Sans, sans-serif`,
         }}
       >
@@ -54,15 +54,24 @@ const Layout = ({ location, title, children }) => {
         fontFamily: `sans-serif`,
         fontWeight: `200`,
         fontSize: `1.2rem`,
+        marginTop: rhythm(2),
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        maxWidth: rhythm(35),
+        display: `flex`,
+        flexDirection: `column`,
+        alignItems: `center`,
       }}
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer
+        style={{
+          position: `fixed`,
+          bottom: 0,
+          backgroundColor: `white`
+        }}
+      >
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
