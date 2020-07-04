@@ -20,13 +20,13 @@ Wordpress2016.overrideThemeStyles = () => {
       width: `fit-content`,
       fontWeight: `100`,
       fontFamily: `sans-serif`,
-      padding: `3px`,
       boxShadow: `inset 0 -3px 0 #ffa502`,
-      transition: `all .2s ease-in`,
+      transition: `all .3s ease-in`,
       color: `black`,
     },
     "h3:hover": {
       color: `white`,
+      paddingLeft: `3px`,
       boxShadow: `inset 0 -40px 0 #ffa502`,
     },
     "a:hover": {
