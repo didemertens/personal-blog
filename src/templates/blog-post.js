@@ -21,6 +21,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <header>
           <h1
             style={{
+              textAlign: `center`,
+              fontWeight: `200`,
               marginTop: rhythm(1),
               marginBottom: 0,
             }}
@@ -32,6 +34,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
+              textAlign: `right`,
             }}
           >
             {post.frontmatter.date}
@@ -43,9 +46,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Bio />
-        </footer>
       </article>
 
       <nav>

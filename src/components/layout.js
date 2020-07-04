@@ -14,6 +14,8 @@ const Layout = ({ location, title, children }) => {
           ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          fontSize: `5rem`,
+          fontFamily: `Open Sans, sans-serif`,
         }}
       >
         <Link
@@ -49,7 +51,8 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
-        fontFamily: `Lato, sans-serif`,
+        fontFamily: `sans-serif`,
+        fontWeight: `200`,
         fontSize: `1.2rem`,
         marginLeft: `auto`,
         marginRight: `auto`,
