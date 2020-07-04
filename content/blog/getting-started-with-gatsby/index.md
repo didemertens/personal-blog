@@ -31,8 +31,6 @@ So now that you've got your basic project running, let's look at all of those \`
 
   * to change static HTML files when they are being rendered on the server
 
-
-
 **Next!**
 
 Now that we've looked at the root files, let's open the \`src\` folder. You'll find 3 very important folders here: components, pages and templates. So what's the difference?
@@ -43,8 +41,6 @@ Now that we've looked at the root files, let's open the \`src\` folder. You'll f
 
 **What about that Gatsby favicon?**
 
-It depends on what project you're starting with. If you have a \`public\` folder then you can change the favicon in your \`index.html\` file. Otherwise, go to your \`gatsby-config\` file and change the icon in the \`gatsby-plugin-manifest\` settings.
-
-
+Go to your \`gatsby-config\` file and change the favicon (called 'icon' here) in the \`gatsby-plugin-manifest\` settings.
 
 That's it! Play around with the files and don't forget to look at the Gatsby documentation - it's amazing.
