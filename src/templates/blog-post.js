@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article style={{ width: rhythm(35) }}>
+      <article style={{ width: `60vw`, }}>
         <header>
           <h1
             style={{

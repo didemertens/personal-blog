@@ -54,22 +54,22 @@ const Layout = ({ location, title, children }) => {
         fontFamily: `sans-serif`,
         fontWeight: `200`,
         fontSize: `1.2rem`,
-        marginTop: rhythm(2),
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(35),
+        maxWidth: `80vw`,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
+        position: `relative`,
+        minHeight: `100vh`,
       }}
     >
-      <header>{header}</header>
-      <main>{children}</main>
+      <header style={{ marginTop: rhythm(2), }}>{header}</header>
+      <main style={{ paddingBottom: rhythm(2) }}>{children}</main>
       <footer
         style={{
-          position: `fixed`,
+          position: `absolute`,
           bottom: 0,
-          backgroundColor: `white`
         }}
       >
         © {new Date().getFullYear()}, Built with
