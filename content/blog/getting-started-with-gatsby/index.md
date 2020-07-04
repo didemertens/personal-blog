@@ -37,10 +37,10 @@ Now that we've looked at the root files, let's open the `src` folder. You'll fin
 
 * Components: These can be seen as the building blocks of your website, which can be used inside your pages. For example, you can create a footer component and add that to all of your pages.
 * Pages: This is where a lot of Gatsby's magic happens. Any file you add here will automatically become a page WITH a path... so don't use funny file names here.
-* Templates: Remember that we were talking about dynamically creating blog posts? This is where you would create a template for a post, which will be used by `gatsby-node` to exactly create that page. Don't worry if you don't see this folder, it depends on what project you started with. 
+* Templates: Remember that we were talking about dynamically creating blog posts? This is where you would create a template for a post, which would be used by `gatsby-node` to create that page. Don't worry if you don't see this folder, it depends on what project you started with. 
 
 That's it! Play around with the files and don't forget to look at the Gatsby documentation - it's amazing.
 
-**Wait... what about that Gatsby favicon?**
+**Wait ... what about that Gatsby favicon?**
 
 Go to your `gatsby-config` file and change the favicon (called 'icon' here) in the `gatsby-plugin-manifest` settings.
