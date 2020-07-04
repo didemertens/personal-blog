@@ -7,13 +7,13 @@ Gatsby is great, and their documentation is awesome, but there are a couple of t
 
 **What is Gatsby?**
 
-First things first, Gatsby is a static site generator. This means that it builds your website just with static files, which means it's extremely fast and good for SEO. Because everything is prepared at build time, don't use Gatsby when you know the content of your website will change a lot. Want to create a website where millions of users can create posts? Run away now. Want to create your personal blog? Then continue reading.
+First things first, Gatsby is a static site generator. This means that it builds your website just with static files, so it's extremely fast and good for SEO. Because everything is prepared at build time, don't use Gatsby when you know the content of your website will change a lot. Want to create a website where millions of users can create posts? Run away now. Want to create your personal blog? Then continue reading.
 
 **Create your Gatsby project**
 
 Use a project from Gatsby's [starter](https://www.gatsbyjs.org/starters/?v=2) collection or create your own Gatsby project with the [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start/), and open your project. 
 
-**Gatsby-... What dis?**
+**Gatsby-... Who dis?**
 
 So now that you've got your basic project running, let's look at all of those `gatsby-` files. 
 
