@@ -7,7 +7,16 @@ Wordpress2016.overrideThemeStyles = () => {
       fontFamily: `Open Sans, sans-serif`,
       fontWeight: `100`,
     },
+    "a.gatsby-resp-image-background-image": {
+
+    },
     "a.gatsby-resp-image-link": {
+      boxShadow: `none`,
+      height: `auto`,
+      maxWidth: `100%`,
+      width: `auto`,
+    },
+    "a.gatsby-resp-image-link:hover": {
       boxShadow: `none`,
     },
     "h1 > a ": {
