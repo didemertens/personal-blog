@@ -1,0 +1,18 @@
+name: Lighthouse
+on: [push, pull_request]
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+    - name: Build site
+      run: gatsby build
+    - name: Run Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        configPath: "./lighthouserc.json"
+        temporaryPublicStorage: true
