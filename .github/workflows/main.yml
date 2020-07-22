@@ -17,7 +17,6 @@ jobs:
         uses: foo-software/lighthouse-check-action@master
         with:
           outputDirectory: /tmp/artifacts
-          urls: 'https://www.foo.software'
       - name: Upload artifacts
         uses: actions/upload-artifact@master
         with:
