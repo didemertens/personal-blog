@@ -4,7 +4,7 @@
         "assertions": {
           "categories:performance": ["off", { "minScore": 1 }],
           "categories:accessibility": ["off", { "minScore": 1 }],
-          "categories:bestpractices": ["error", { "minScore": 1 }],
+          "categories:bestpractices": ["error", { "minScore": 0.5 }],
           "categories:seo": ["off", { "minScore": 1 }]
         }
       },
