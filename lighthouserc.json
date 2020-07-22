@@ -2,10 +2,10 @@
     "ci": {
       "assert": {
         "assertions": {
-          "categories:performance": ["off", { "minScore": 1 }],
-          "categories:accessibility": ["warn", { "minScore": 1 }],
-          "categories:best-practices": ["error", { "minScore": 1 }],
-          "categories:seo": ["off", { "minScore": 1 }]
+          "categories:performance": ["off", { "minScore": 0.9 }],
+          "categories:accessibility": ["warn", { "minScore": 0.9 }],
+          "categories:best-practices": ["warn", { "minScore": 0.9 }],
+          "categories:seo": ["off", { "minScore": 0.9 }]
         }
       },
       "collect": {
