@@ -12,7 +12,15 @@ jobs:
       - run: npm install
       - run: npm run build
       - name: Run Lighthouse CI
+      - uses: actions/checkout@master
+      - run: mkdir /tmp/artifacts
+      - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
-          configPath: "./lighthouserc.json"
-          temporaryPublicStorage: true
+          outputDirectory: /tmp/artifacts
+          urls: 'https://www.foo.software'
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: Lighthouse reports
+          path: /tmp/artifacts
