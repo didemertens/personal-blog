@@ -15,8 +15,7 @@ const Layout = ({ location, title, children }) => {
           marginBottom: rhythm(2),
           marginTop: 0,
           fontSize: `6rem`,
-          fontFamily: `Open Sans, sans-serif`,
-          color: `pink`,
+          fontFamily: `Open Sans, sans-serif`
         }}
       >
         <Link
