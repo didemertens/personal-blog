@@ -14,6 +14,6 @@ jobs:
       - name: Percy Test
         uses: percy/snapshot-action@v0.1.0
         with:
-          build-directory: "_public/"
+          build-directory: "./public"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
