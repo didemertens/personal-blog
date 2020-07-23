@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               textAlign: `center`,
-              fontWeight: `600`,
+              fontWeight: `200`,
               marginTop: rhythm(1),
               marginBottom: 0,
             }}
