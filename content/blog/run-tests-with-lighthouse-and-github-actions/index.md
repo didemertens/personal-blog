@@ -1,5 +1,5 @@
 ---
-title: Run tests with Lighthouse and GitHub Actions
+title: GitHub Actions + Lighthouse
 date: 2020-07-23T15:41:16.583Z
 description: Use GitHub Actions to run Lighthouse and audit your Gatsby website.
 ---
