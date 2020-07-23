@@ -9,8 +9,8 @@
          }
 
       },
-      "url": ["/index.html"],
       "collect": {
+        "url": ["http://localhost/"],
         "staticDistDir": "./public"
       }
     }
