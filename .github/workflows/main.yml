@@ -11,9 +11,8 @@ jobs:
           node-version: "14.x"
       - run: npm install
       - run: npm run build
-      - name: Run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v2
-        with:
-          configPath: "./lighthouserc.json"
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.4.x
+          lhci autorun
