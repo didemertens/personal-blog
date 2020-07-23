@@ -9,6 +9,7 @@
          }
 
       },
+      "urls": ["http://localhost/"],
       "collect": {
         "staticDistDir": "./public"
       }
