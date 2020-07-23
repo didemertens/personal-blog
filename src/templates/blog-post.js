@@ -11,8 +11,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
-  console.log(post.html)
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -24,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               textAlign: `center`,
-              fontWeight: `200`,
+              fontWeight: `600`,
               marginTop: rhythm(1),
               marginBottom: 0,
             }}
