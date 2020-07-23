@@ -17,5 +17,3 @@ jobs:
         with:
           configPath: './lighthouserc.json'
           temporaryPublicStorage: true
-          urls: |
-            http://localhost/
