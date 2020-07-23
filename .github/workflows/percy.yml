@@ -1,6 +1,6 @@
 name: Percy
 on: 
-  pull-request
+  [push, pull-request]
 jobs:
   build:
     runs-on: ubuntu-latest
