@@ -16,6 +16,7 @@ const Layout = ({ location, title, children }) => {
           marginTop: 0,
           fontSize: `6rem`,
           fontFamily: `Open Sans, sans-serif`,
+          color: `orange`
         }}
       >
         <Link
