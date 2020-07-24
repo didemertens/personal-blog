@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Digital Garden`,
     author: {
-      name: `Dide Mertens`,
-      summary: `who lives and works in London.`,
+      name: `Dide Mertens`
     },
     description: `A digital garden with random stuff.`,
     siteUrl: `https://didewrites.netlify.app/`,
@@ -74,6 +73,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

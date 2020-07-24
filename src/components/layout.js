@@ -1,82 +1,65 @@
 import React from "react"
-import { Link } from "gatsby"
+import { StylesProvider } from "@material-ui/styles"
+import { ThemeProvider } from "@material-ui/core"
+import {
+  createGlobalStyle,
+  ThemeProvider as StyledThemeProvider,
+} from "styled-components"
+import { normalize } from "styled-normalize"
+import theme from "../styles/theme"
 
-import { rhythm, scale } from "../utils/typography"
+import Header from "./Header/Header"
+
+export const GlobalStyle = createGlobalStyle`
+  ${normalize}
+
+  .main-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  html {
+    font-size: 62.5%; /* 62.5% of 16px = 10px */
+  }
+
+  body {
+    margin: 0
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+  };
+`
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  let header
-
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(2),
-          marginTop: 0,
-          fontSize: `6rem`,
-          fontFamily: `Open Sans, sans-serif`
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+ 
   return (
-    <div
-      style={{
-        fontFamily: `sans-serif`,
-        fontWeight: `200`,
-        fontSize: `1.2rem`,
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: `80vw`,
-        display: `flex`,
-        flexDirection: `column`,
-        alignItems: `center`,
-        position: `relative`,
-        minHeight: `100vh`,
-      }}
-    >
-      <header style={{ marginTop: rhythm(2), }}>{header}</header>
-      <main style={{ paddingBottom: rhythm(2) }}>{children}</main>
-      <footer
-        style={{
-          position: `absolute`,
-          bottom: 0,
-        }}
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </div>
+    <>
+    <StylesProvider injectFirst>
+      <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <StyledThemeProvider theme={theme}>
+            <div className="main-container">
+              <Header location={location} rootPath={rootPath} title={title} />
+              <main>{children}</main>
+              <footer>
+                © {new Date().getFullYear()}, Built with
+                {` `}
+                <a href="https://www.gatsbyjs.org">Gatsby</a>
+              </footer>
+          </div>
+        </StyledThemeProvider>
+      </ThemeProvider>
+    </StylesProvider>
+  </>
   )
 }
 
