@@ -19,6 +19,10 @@ const theme = createTheme({
     h1: {
       fontSize: "5rem",
     },
+    body1: {
+      fontSize: "1.6rem",
+      fontFamily: "sans-serif",
+    },
   },
 })
 

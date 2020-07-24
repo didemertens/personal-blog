@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Digital Garden`,
     author: {
-      name: `Dide Mertens`,
-      summary: `who lives and works in London.`,
+      name: `Dide Mertens`
     },
     description: `A digital garden with random stuff.`,
     siteUrl: `https://didewrites.netlify.app/`,

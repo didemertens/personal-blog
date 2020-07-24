@@ -1,6 +1,6 @@
 import React from "react"
 
-import { BigHeader, SmallHeader, StyledLink } from "./styles"
+import { BigHeader, SmallHeader, StyledLink, Name } from "./styles"
 
 const Header = ({ location, rootPath, title }) => {
     let header
@@ -11,6 +11,7 @@ const Header = ({ location, rootPath, title }) => {
             <StyledLink to={`/`}>
               {title}
             </StyledLink>
+            <Name variant="body1">Dide Mertens</Name>
           </BigHeader>
         )
       } else {

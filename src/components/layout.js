@@ -13,19 +13,33 @@ import Header from "./Header/Header"
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
 
+  .main-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+  }
+
   html {
     font-size: 62.5%; /* 62.5% of 16px = 10px */
   }
 
   body {
     margin: 0
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
   };
 `
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  // let header
-
  
   return (
     <>
@@ -33,29 +47,10 @@ const Layout = ({ location, title, children }) => {
       <GlobalStyle />
         <ThemeProvider theme={theme}>
           <StyledThemeProvider theme={theme}>
-            <div
-              style={{
-                fontFamily: `sans-serif`,
-                fontWeight: `200`,
-                fontSize: `1.2rem`,
-                marginLeft: `auto`,
-                marginRight: `auto`,
-                maxWidth: `80vw`,
-                display: `flex`,
-                flexDirection: `column`,
-                alignItems: `center`,
-                position: `relative`,
-                minHeight: `100vh`,
-              }}
-            >
+            <div className="main-container">
               <Header location={location} rootPath={rootPath} title={title} />
               <main>{children}</main>
-              <footer
-                style={{
-                  position: `absolute`,
-                  bottom: 0,
-                }}
-              >
+              <footer>
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <a href="https://www.gatsbyjs.org">Gatsby</a>
