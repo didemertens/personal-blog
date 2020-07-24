@@ -66,7 +66,7 @@ import createMuiTheme from "@material-ui/core/styles/createMuiTheme"
 import memoize from "fast-memoize"
 
 const COLORS = {
-  primary: "pink",
+  primary: "#fcba03",
 }
 
 const createTheme = memoize(createMuiTheme)
