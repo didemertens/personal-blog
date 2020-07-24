@@ -1,5 +1,4 @@
 import React from "react"
-import {Link} from "gatsby"
 import { StylesProvider } from "@material-ui/styles"
 import { ThemeProvider } from "@material-ui/core"
 import {
@@ -8,6 +7,8 @@ import {
 } from "styled-components"
 import { normalize } from "styled-normalize"
 import theme from "../styles/theme"
+
+import Header from "./Header/Header"
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -22,48 +23,10 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 const Layout = ({ location, title, children }) => {
-const rootPath = `${__PATH_PREFIX__}/`
-  let header
+  const rootPath = `${__PATH_PREFIX__}/`
+  // let header
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          marginTop: `15px`,
-          fontSize: `6rem`,
-          fontFamily: `Open Sans, sans-serif`
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          marginTop: `5px`,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+ 
   return (
     <>
     <StylesProvider injectFirst>
@@ -85,7 +48,7 @@ const rootPath = `${__PATH_PREFIX__}/`
                 minHeight: `100vh`,
               }}
             >
-              <header>{header}</header>
+              <Header location={location} rootPath={rootPath} title={title} />
               <main>{children}</main>
               <footer
                 style={{
